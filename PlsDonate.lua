@@ -42,7 +42,7 @@ local booths = { ["1"] = "72, 3, 36", ["2"] = "83, 3, 161", ["3"] = "11, 3, 36",
 local queueonteleport = (syn and syn.queue_on_teleport) or queue_on_teleport or (fluxus and fluxus.queue_on_teleport)
 local httprequest = (syn and syn.request) or http and http.request or http_request or (fluxus and fluxus.request) or request
 local httpservice = game:GetService('HttpService')
-queueonteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/ForeverSaad/changed/main/PlsDonate.lua'))()")
+queueonteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/tzechco/roblox-scripts/main/PLS%20DONATE/autofarm.lua'))()")
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/tzechco/roblox-scripts/main/UI/ui-engine-v2.lua"))()
 
 local function claimGifts()
@@ -140,6 +140,8 @@ local function waitServerHop()
         totaltime =- 1
         
         stime = totaltime
+        
+        task.wait(1)
     end
 end
 
@@ -171,7 +173,7 @@ local function slider(value, whichSlider)
         return slider(getgenv().settings[whichSlider], whichSlider)
     end
 end
-local stime = nil
+local stime = 300
 --Booth update function
 local function update()
     local text
