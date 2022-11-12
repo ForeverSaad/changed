@@ -133,7 +133,7 @@ local function serverHop()
         game:GetService("TeleportService"):TeleportToPlaceInstance(gameId, servers[math.random(1, #servers)], Players.LocalPlayer)
     end)
 end
-
+local stime = 300
 local function waitServerHop()
     local totaltime = getgenv().settings.serverHopDelay * 60
     for i = 1, totaltime do
@@ -173,7 +173,7 @@ local function slider(value, whichSlider)
         return slider(getgenv().settings[whichSlider], whichSlider)
     end
 end
-local stime = 300
+
 --Booth update function
 local function update()
     local text
